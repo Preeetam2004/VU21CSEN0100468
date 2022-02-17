@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    char name[20];
+    FILE *fp;
+    fp=fopen("name.txt","a");
+    printf("enter name");
+    scanf("%s",name);
+    fprintf(fp,"%s",name);
+     fclose(fp); 
+     fp=fopen("name.txt","r");
+    if(fscanf(fp,"%s",name))
+    printf("%s",name);
+     fclose(fp);   
+}
